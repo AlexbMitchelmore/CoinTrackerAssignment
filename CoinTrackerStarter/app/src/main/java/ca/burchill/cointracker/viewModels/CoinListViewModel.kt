@@ -33,7 +33,9 @@ class CoinListViewModel() : ViewModel() {
     val coins: LiveData<List<NetworkCoin>>
         get() = _coins
 
-
+    private val _dataBase = MutableLiveData<DatabaseEntities>()
+    val dataBase: LiveData<DatabaseEntities>
+        get() = _dataBase
 
     // or use viewModelScope
     private var viewModelJob = Job()
